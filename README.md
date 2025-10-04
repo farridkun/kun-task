@@ -36,7 +36,6 @@ npm run dev
 
 ```bash
 npm run build
-netlify deploy --prod
 ```
 
 ## ✨ Features
@@ -239,7 +238,6 @@ kun-task/
 
 ### Base URL
 - **Development**: `http://localhost:8888/.netlify/functions/api`
-- **Production**: `https://your-site.netlify.app/.netlify/functions/api`
 
 ### Authentication
 

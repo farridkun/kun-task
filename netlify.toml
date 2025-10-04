@@ -22,7 +22,9 @@
   to = "/.netlify/functions/api/:splat"
   status = 200
 
+# SPA fallback - exclude function routes
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false
