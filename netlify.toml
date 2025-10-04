@@ -1,0 +1,28 @@
+[build]
+  command = "cd apps/web && npm install && npm run build && cd ../api/functions && npm install"
+  publish = "apps/web/dist"
+  functions = "apps/api/functions"
+
+[build.environment]
+  VITE_API_BASE_URL = "/api"
+
+[dev]
+  command = "npm run dev"
+  port = 5173
+  publish = "dist"
+  functions = "../api/functions"
+
+[[redirects]]
+  from = "/api"
+  to = "/.netlify/functions/api"
+  status = 200
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

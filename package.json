@@ -1,0 +1,24 @@
+{
+  "name": "kun-task",
+  "version": "1.0.0",
+  "description": "Kun Task Management",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "npm -w apps/web run build",
+    "test": "npm -w apps/web run test",
+    "preview": "npm -w apps/web run preview",
+    "lint": "npm -w apps/web run lint",
+    "install:all": "npm install && npm -w apps/web install && npm -w apps/api install"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
